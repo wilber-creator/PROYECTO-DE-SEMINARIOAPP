@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/nav_login"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.LOGIN"
+        android:label="@string/menu_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/nav_restaurante"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_1"
+        android:label="@string/menu_restaurante"
+        tools:layout="@layout/activity_registrar__restaurant" />
+    <activity
+        android:id="@+id/nav_registrar_Usuario"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_USUARIO"
+        android:label="@string/menu_registro_Usuario"
+        tools:layout="@layout/activity_registrar__usuario" />
+</navigation>
