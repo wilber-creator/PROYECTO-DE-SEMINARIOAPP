@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/black_simple_steak_roasted_steak_psd_layered_h5_background_material"
+    android:background="@drawable/e_commerce_taobao_summer_food"
     tools:context=".VER_MENUS">
 
     <TextView
