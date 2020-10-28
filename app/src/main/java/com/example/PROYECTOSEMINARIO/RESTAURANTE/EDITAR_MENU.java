@@ -20,6 +20,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import collects1.Menus;
+import collects1.VerMenuAdapter;
 import cz.msebera.android.httpclient.Header;
 
 public class EDITAR_MENU extends AppCompatActivity {
@@ -63,7 +64,7 @@ public class EDITAR_MENU extends AppCompatActivity {
 
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
-        client.put ("http://192.168.100.71:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
+        client.get ("http://192.168.100.102:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
@@ -79,8 +80,8 @@ public class EDITAR_MENU extends AppCompatActivity {
                         //menus.setFoto(object.getString("foto"));
                         list_data.add(menus);
                     }
-                    //VerMenuAdapter adapter =  new VerMenuAdapter(EDITAR_MENU.this,list_data);
-                    //list.setAdapter(adapter);
+                    VerMenuAdapter adapter =  new VerMenuAdapter(EDITAR_MENU.this,list_data);
+                    list.setAdapter(adapter);
 
 
                 }catch (JSONException e) {

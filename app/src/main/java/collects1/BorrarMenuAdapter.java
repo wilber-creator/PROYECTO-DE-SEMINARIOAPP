@@ -98,7 +98,7 @@ public class BorrarMenuAdapter extends BaseAdapter {
 
                 AsyncHttpClient client = new AsyncHttpClient();
 
-                client.delete("http://192.168.100.71:8000/api/1.0/menus" + "/" + id, new JsonHttpResponseHandler() {
+                client.delete("http://192.168.1.102:7777/api/v1.0/menus" + "/" + id, new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         try {

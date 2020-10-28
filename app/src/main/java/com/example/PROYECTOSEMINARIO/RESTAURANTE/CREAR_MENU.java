@@ -3,15 +3,17 @@ package com.example.PROYECTOSEMINARIO.RESTAURANTE;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.adapter2.EsMenu;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.ADAPTADOR_2.EsMenu;
 import com.example.PROYECTOSEMINARIO.RESTAURANTE.utils.Data;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -29,7 +31,7 @@ public class CREAR_MENU extends AppCompatActivity {
 
     EditText producto,precio,descripcion;
     ImageView imagen;
-
+    TextView _id;
     ListView listcrear;
     ArrayList<EsMenu> list_data = new ArrayList<> ();
 
@@ -38,11 +40,16 @@ public class CREAR_MENU extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_menu);
         //istcrear=findViewById(R.id.);
-        foto = findViewById (R.id.tomarfoto);
-        producto = findViewById(R.id.producto);
-        precio = findViewById(R.id.precioproducto);
-        descripcion = findViewById(R.id.descripcion);
-        aceptar = findViewById (R.id.aceptar);
+        foto = findViewById (R.id.tomarfotoCM);
+        producto = findViewById(R.id.productoCM);
+        precio = findViewById(R.id.precioproductoCM);
+        descripcion = findViewById(R.id.descripcionCM);
+        aceptar = findViewById (R.id.aceptarCM);
+
+        _id=(TextView) findViewById(R.id.idRestauM);
+        _id.setText( getIntent().getExtras().getString("_id"));
+
+
        // imagen = findViewById (R.id.fotomenu);
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,9 +67,10 @@ public class CREAR_MENU extends AppCompatActivity {
 
 
     public void sedData(){
-        final EditText nombre  = findViewById(R.id.producto);
-        final EditText precio  = findViewById(R.id.precioproducto);
-        final EditText descripcion = findViewById(R.id.descripcion);
+        final EditText nombre  = findViewById(R.id.productoCM);
+        final EditText precio  = findViewById(R.id.precioproductoCM);
+        final EditText descripcion = findViewById(R.id.descripcionCM);
+
         //final ImageView image = findViewById (R.id.fotomenu);
 
         if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")){
@@ -82,6 +90,7 @@ public class CREAR_MENU extends AppCompatActivity {
         params.put("nombre", nombre.getText().toString());
         params.put("precio", precio.getText().toString());
         params.put("descripcion",descripcion.getText().toString());
+        params.put("restaurante",_id.getText().toString());
 
         client .post(Data.REGISTER_MENUS, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -91,6 +100,26 @@ public class CREAR_MENU extends AppCompatActivity {
 
                 AlertDialog alertDialog = new AlertDialog.Builder(CREAR_MENU.this).create();
                 try {
+
+
+
+
+
+                    String id = response.getString("id");
+                    Data.ID_RESTORANT = id;
+                    String msn = response.getString("msn");
+                    alertDialog.setTitle("RESPONSE SERVER");
+                    alertDialog.setMessage(msn);
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {/*
+                                    Intent camera = new Intent(REGISTRAR_RESTAURANTE.this, FotoRestaurant.class);
+                                    REGISTRAR_RESTAURANTE.this.startActivity(camera);*/
+                                    dialog.dismiss();
+                                }
+                            });
+                    alertDialog.show();
+                   /*
                     String id = response.getString("id");
                     int resp = response.getInt("resp");
 
@@ -102,7 +131,7 @@ public class CREAR_MENU extends AppCompatActivity {
                         descripcion.getText().clear();
                         //loadComponents();
 
-                    }
+                    }*/
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -132,7 +161,7 @@ public class CREAR_MENU extends AppCompatActivity {
 
                         list_data.add(menus);
                     }
-                    RESTAURANTE_ADAPTAR adapter =  new RESTAURANTE_ADAPTAR(CrearMenu.this,list_data);
+                    MenuAdapter adapter =  new MenuAdapter(CREAR_MENU.this,list_data);
                     listcrear.setAdapter(adapter);
 
 

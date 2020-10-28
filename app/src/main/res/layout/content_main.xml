@@ -4,100 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/churrasco_grill_a_carne_fogo_background"
+    android:background="@drawable/crustacio_cascarudo"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
-    <fragment
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/mobile_navigation" />
-
     <Button
-        android:id="@+id/registroMenus"
-        android:layout_width="243dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/restaurantes"
+        android:layout_width="236dp"
+        android:layout_height="63dp"
         android:background="@color/colorAccent"
-        android:text="REGISTRAR MENUS"
+        android:fontFamily="@font/abril_fatface"
+        android:text="RESTAURANTES"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorHint="#100F0F"
+        android:textColorLink="#F60707"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menus" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.364" />
 
-    <Button
-        android:id="@+id/Registrar_Restaurante"
-        android:layout_width="245dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="24dp"
-        android:background="@color/colorAccent"
-        android:text="Registrar Restaurante"
-        android:textSize="18sp"
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="331dp"
+        android:layout_height="192dp"
+        android:fontFamily="@font/courgette"
+        android:text='"Paco Meralgo" Servicio Restaurantes'
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantes" />
-
-    <Button
-        android:id="@+id/register2"
-        android:layout_width="241dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
-        android:background="@color/colorAccent"
-        android:text="REGISTRAR USUARIO"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="240dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="237dp"
+        android:layout_height="60dp"
         android:background="@color/colorAccent"
-        android:text="INGRESAR"
+        android:fontFamily="@font/abril_fatface"
+        android:text="@string/ingresar"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registroMenus" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
     <Button
-        android:id="@+id/menus"
-        android:layout_width="244dp"
-        android:layout_height="50dp"
+        android:id="@+id/registrarse"
+        android:layout_width="238dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:background="@color/colorAccent"
-        android:text="VER MENUS"
+        android:fontFamily="@font/abril_fatface"
+        android:text="REGISTRARSE"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Registrar_Restaurante" />
-
-    <Button
-        android:id="@+id/restaurantes"
-        android:layout_width="248dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="5dp"
-        android:background="@color/colorAccent"
-        android:text="VER RESTAURANTES"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nav_host_fragment" />
+        app:layout_constraintTop_toBottomOf="@+id/login"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

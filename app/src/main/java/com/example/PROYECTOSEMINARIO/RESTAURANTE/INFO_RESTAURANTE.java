@@ -40,7 +40,7 @@ public class INFO_RESTAURANTE extends AppCompatActivity {
         ver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(INFO_RESTAURANTE.this, VER_MENU.class));
+                startActivity(new Intent(INFO_RESTAURANTE.this, VER_MENIU.class));
 
             }
         });

@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.PROYECTOSEMINARIO.RESTAURANTE.utils.Data;
@@ -45,12 +44,11 @@ public class EDITAR_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar1);
+        setContentView(R.layout.activity_editar_1);
         image1 = findViewById (R.id.fotomenu1);
         title2 = findViewById (R.id.producto1);
         precio1 = findViewById(R.id.precio1);
         descripcion1 = findViewById (R.id.descripcion1);
-
         aceptar = findViewById(R.id.aceptar1);
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,12 +76,13 @@ public class EDITAR_1 extends AppCompatActivity {
         //image1.setImageURI(Uri.parse(img));
     }
     public void sedData() {
-        TextView title2 = findViewById(R.id.producto1);
-        TextView precio1 = findViewById(R.id.precio1);
-        TextView descripcion1 = findViewById(R.id.descripcion1);
+
+
 
         AsyncHttpClient client = new AsyncHttpClient();
         //client.addHeader("authorization", Data.TOKEN);
+
+
         RequestParams params = new RequestParams();
 
         params.put("nombre", title2.getText().toString());
@@ -91,12 +90,19 @@ public class EDITAR_1 extends AppCompatActivity {
         params.put("descripcion", descripcion1.getText().toString());
 
         // Toast.makeText(getApplicationContext(),Data.REGISTER_CLIENTE+"/"+Data.ID_User,Toast.LENGTH_LONG).show();
-        client.patch(Data.REGISTER_MENUS+"/", params, new JsonHttpResponseHandler() {
+        client.put(Data.REGISTER_MENUS+"/", params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
+
                 AlertDialog alertDialog = new AlertDialog.Builder(EDITAR_1.this).create();
                 try {
                     int resp = response.getInt("resp");
+
+
+
+
+
                     if (resp == 200) {
                         JSONObject json = response.getJSONObject("dato");
                         final String nombre_resp = json.getString("nombre");

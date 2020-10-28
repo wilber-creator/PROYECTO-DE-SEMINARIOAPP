@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.adapter2.EsMenu;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.adapter2.MenuAdapter1;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.apiResfull.MenuApi;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.apiResfull.onLoadData;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.ADAPTADOR_2.EsMenu;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.ADAPTADOR_2.MenuAdapter1;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.APIRES_FULL.MenuApi;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.APIRES_FULL.onLoadData;
 
 import org.json.JSONArray;
 import org.json.JSONException;

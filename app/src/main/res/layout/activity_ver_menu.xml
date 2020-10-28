@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/food_food_snack_eating_goods"
-    tools:context=".VER_MENU">
+    android:background="@drawable/imagen_4"
+    tools:context=".VER_MENIU">
 
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="60dp"
         android:background="@color/colorAccent3"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="MissingConstraints"

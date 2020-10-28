@@ -27,10 +27,11 @@
         android:id="@+id/nav_restaurante"
         android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_1"
         android:label="@string/menu_restaurante"
-        tools:layout="@layout/activity_registrar__restaurant" />
+        tools:layout="@layout/activity_registrar_restaurant" />
     <activity
         android:id="@+id/nav_registrar_Usuario"
         android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_USUARIO"
         android:label="@string/menu_registro_Usuario"
-        tools:layout="@layout/activity_registrar__usuario" />
+        tools:layout="@layout/activity_registrar_usuario" />
+
 </navigation>

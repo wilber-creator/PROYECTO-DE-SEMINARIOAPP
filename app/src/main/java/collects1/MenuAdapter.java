@@ -24,33 +24,32 @@ import java.util.List;
 
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
-/*public class RESTAURANTE_ADAPTAR extends BaseAdapter {
+public class MenuAdapter extends BaseAdapter {
     Context context;
     List<Menus> menus;
-    public RESTAURANTE_ADAPTAR(Context context, ArrayList<Menus> menus) {
+    public MenuAdapter(Context context, ArrayList<Menus> menus) {
         this.context = context;
         this.menus = menus;
     }
-}*/
-/*
+
     @Override
     public int getCount() {
         return this.menus.size();
     }
 
- /*   @Override
+    @Override
     public Object getItem(int position) {
         return this.menus.get(position);
     }
-/*
+
     @Override
     public long getItemId(int position) {
         return Long.parseLong(this.menus.get(position).getId());
     }
-/*
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        /*if (convertView == null){
+        if (convertView == null){
             LayoutInflater inflate = (LayoutInflater) this.context.getSystemService (LAYOUT_INFLATER_SERVICE);
             convertView = inflate.inflate (R.layout.item_ui, null);
         }
@@ -71,6 +70,7 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
             @Override
             public void onClick(View v) {
+
                 AlertDialog.Builder builder = new AlertDialog.Builder (context);
                 LayoutInflater inflater = ((AppCompatActivity)context).getLayoutInflater();
                 builder.setTitle("Cantidad");
@@ -79,18 +79,22 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
                 //String cant = can.getText().toString();
                 //Integer canti = Integer.parseInt(cant);
                 //final Integer total = canti *pre;
-                /*builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        precio.setText(total);
+                      //  precio.setText(total);
 
-                        Intent i = new Intent(context, Carrito.class);
-                        i.putExtra("nombre", nombre.getText());
 
-                        i.putExtra("precio",precio.getText());
+
+                        //Intent i = new Intent(context, Carrito.class);
+                        //i.putExtra("nombre", nombre.getText());
+
+                        //i.putExtra("precio",precio.getText());
                         // i.putExtra ("image",item.foto);
 
-                        context.startActivity(i);
+                        //context.startActivity(i);
+
+
                     }
                 });
                 builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -105,9 +109,8 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
             }
 
-        });*/
-/*
+        });
+
         return convertView;
-    }*/
-/*
-}*/
+    }
+}

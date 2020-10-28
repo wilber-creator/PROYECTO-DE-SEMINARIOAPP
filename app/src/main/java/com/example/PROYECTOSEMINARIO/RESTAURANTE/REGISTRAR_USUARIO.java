@@ -29,7 +29,7 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar__usuario);
+        setContentView(R.layout.activity_registrar_usuario);
         name = findViewById(R.id.namerestorant);
         ci = findViewById(R.id.ci);
         phone = findViewById(R.id.phonerestorant);
@@ -58,7 +58,7 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
         String correo11 = correo1.getText().toString();
         String password11 = password1.getText().toString();
 
-        if (name1.length() == 0){
+        if (name1.length() ==0){
             Toast.makeText(this, "Debes ingresar un nombre", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -76,13 +76,13 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
             Toast.makeText(this, "Debes ingresar un correo", Toast.LENGTH_SHORT).show();
             return;
         }
-        if (password11.length() <= 7){
-            Toast.makeText(this, "Debes ingresar minimammente 8 caracteres", Toast.LENGTH_SHORT).show();
+        if (password11.length() <= 3){
+            Toast.makeText(this, "Debes ingresar minimammente 6 caracteres", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (name1.length()!=0 && ci1.length()!=0 && phone1.length()!=0 && correo11.length()!=0  && password11.length()!=7) {
-            Toast.makeText(this, "Se Registro Correctamente", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Se Registro Correctamente los datos", Toast.LENGTH_SHORT).show();
             startActivity (new Intent(REGISTRAR_USUARIO.this, LOGIN.class));
 
 
@@ -98,7 +98,7 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
         TextView email  = findViewById(R.id.correo1);
         TextView password  = findViewById(R.id.password1);
         Spinner tipo = findViewById(R.id.tipo);
-        if(nombre.length()>5){
+        if(nombre.length()>35){
 
             return;
         }
@@ -122,10 +122,11 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
 
 
                 try {
+
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                   // Intent  pruebaED=new Intent(EDITAR_RESTAURANTE.this,VER_RESTAURANTE_1.class);
-                   // startActivity(pruebaED);
+                 //  Intent  pruebaED=new Intent(EDITAR_RESTAURANTE.this,VER_RESTAURANTE_1.class);
+                   //startActivity(pruebaED);
                 } catch (JSONException e) {
 
                     e.printStackTrace();

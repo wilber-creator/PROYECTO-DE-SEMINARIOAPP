@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.adapter1.EsRestaurante;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.adapter1.RESTAURANTE_ADAPTAR;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.apiResfull.ResApi;
-import com.example.PROYECTOSEMINARIO.RESTAURANTE.apiResfull.onLoadData;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.ADAPTADOR_1.EsRestaurante;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.ADAPTADOR_1.ResAdapter1;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.APIRES_FULL.ResApi;
+import com.example.PROYECTOSEMINARIO.RESTAURANTE.APIRES_FULL.onLoadData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,12 +22,13 @@ import cz.msebera.android.httpclient.Header;
 public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
 
     ListView listares;
+    String id;
     ImageButton atrasVR;
     ArrayList<EsRestaurante> datos=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver__restaurante1);
+        setContentView(R.layout.activity_ver_restaurante1);
         /*
         atrasVR = findViewById(R.id.imatras);
         atrasVR.setOnClickListener(new View.OnClickListener() {
@@ -38,8 +39,13 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
             }
         });*/
         listares = findViewById(R.id.lisrestaurant2);
+
+        Bundle intent = getIntent().getExtras();
+        id = intent.getString("_id");
+
         ResApi api= new ResApi(this);
-        api.loadRes();
+        //api.loadRes();
+        api.loadRes(id);
         /*
         for (int i = 0; i < 100; i++) {
             //datos.add("item" + i);
@@ -83,11 +89,11 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
                 }else{
                     item.setCalle("");
                 }
-                /*if(data.getJSONObject(i).has("picture")){
+                if(data.getJSONObject(i).has("picture")){
                     item.setImagen(data.getJSONObject(i).getString("picture"));
                 }else{
                     item.setImagen("");
-                }*/
+                }
 
                 item.setId(data.getJSONObject(i).getString("_id"));
 
@@ -101,7 +107,7 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
 
 
         }
-        RESTAURANTE_ADAPTAR adapter=new RESTAURANTE_ADAPTAR(datos, VER_RESTAURANTE_1.this);
+        ResAdapter1 adapter=new ResAdapter1(datos, VER_RESTAURANTE_1.this);
         // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
         listares.setAdapter(adapter);
 

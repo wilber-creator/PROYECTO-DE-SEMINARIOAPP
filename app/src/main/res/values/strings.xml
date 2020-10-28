@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">APP SEMINARIO 2020 ZANZARAH</string>
+    <string name="app_name">SEMINARIO2020</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Pedidos Online</string>
-    <string name="nav_header_subtitle">Pedidos@gmail.com</string>
+
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -32,5 +32,7 @@
     <string name="title_activity_info__restaurante">Info_Restaurante</string>
     <string name="Estado">Estado</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_login1">Login1</string>
+    <string name="ingresar">ingresar</string>
 
 </resources>

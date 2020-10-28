@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IMAGEN_RESTAURANTE">
+    tools:context=".RESTAURANTE_FOTO">
 
     <ImageView
         android:id="@+id/imgrestaurant"
@@ -29,7 +29,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/rectangle"
+        android:background="@color/colorAccent"
         android:onClick="tomarFoto"
         android:paddingLeft="14dp"
         android:paddingTop="1dp"

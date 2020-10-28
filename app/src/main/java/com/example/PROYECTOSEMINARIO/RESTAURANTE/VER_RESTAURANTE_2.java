@@ -24,7 +24,7 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver__restaurante2);
+        setContentView(R.layout.activity_ver_restaurante_2);
         listares = findViewById(R.id.lisrestaurant2);
         loadComponents();
     }
@@ -35,7 +35,7 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
 /*
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 try {
-                    JSONArray data = response.getJSONArray("")
+                    JSONArray data = response.getJSONArray("");
                     for (int i =0 ; i < data.length(); i++) {
                         Restaurants res =new Restaurants();
                         JSONObject object = data.getJSONObject(i);
@@ -52,8 +52,8 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
                 }catch (JSONException e) {
                     e.printStackTrace();
                 }
-            }
-*/
+            }*/
+
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
 
             }
@@ -62,7 +62,7 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
                 try {
-                    JSONArray data = response.getJSONArray("result");
+                    JSONArray data = response.getJSONArray("msn");
                     for (int i =0 ; i < data.length(); i++) {
                         Restaurants res =new Restaurants();
                         JSONObject object = data.getJSONObject(i);

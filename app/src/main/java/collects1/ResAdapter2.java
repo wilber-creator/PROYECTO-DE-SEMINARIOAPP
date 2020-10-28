@@ -55,7 +55,7 @@ public class ResAdapter2 extends BaseAdapter {
 
         if(restaurants.get(position).getImagen().equals("No IMAGE")){
             Glide.with(context)
-                    .load("https://sm.ign.com/t/ign_latam/screenshot/default/download_5v2y.1280.jpg")
+                    .load("https://image.freepik.com/vector-gratis/plantilla-fondo-menu-restaurante_23-2147490036.jpg")
                     .centerCrop()
                     .into(image);
         }

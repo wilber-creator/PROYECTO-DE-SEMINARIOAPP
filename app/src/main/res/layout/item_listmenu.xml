@@ -14,17 +14,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/e_commerce_taobao_summer_food">
+            android:background="@drawable/imagen_5">
 
             <ImageView
                 android:id="@+id/imagenVM"
-                android:layout_width="64dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
+                android:layout_width="97dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/tenedor2" />
+                app:srcCompat="@drawable/ic_baseline_sentiment_satisfied_alt_24" />
 
             <TextView
                 android:id="@+id/nombreVM"
@@ -35,7 +35,6 @@
                 android:hint="nombre 1"
                 android:textAlignment="center"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="20sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -52,8 +51,7 @@
                 android:fontFamily="@font/abril_fatface"
                 android:hint="nobre 2"
                 android:textAlignment="center"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="#0E0D0D"
                 android:textSize="18sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintStart_toEndOf="@+id/imagenVM"
@@ -66,8 +64,7 @@
                 android:layout_marginTop="4dp"
                 android:hint="direccion"
                 android:textAlignment="center"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textColorHint="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="#0E0E0E"
                 android:textSize="18sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +79,11 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorAccent"
+                android:fontFamily="@font/abril_fatface"
                 android:text="Editar"
+
+
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/eliminarVM" />
 
@@ -93,7 +94,9 @@
                 android:layout_marginEnd="28dp"
                 android:layout_marginBottom="8dp"
                 android:background="@color/colorAccent"
+                android:fontFamily="@font/abril_fatface"
                 android:text="ELIMINAR"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 

@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -19,14 +18,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-//import collects1.RESTAURANTE_ADAPTAR;
+import collects1.MenuAdapter;
 import collects1.Menus;
 import cz.msebera.android.httpclient.Header;
 
 public class ELIMINAR_MENU extends AppCompatActivity {
     ListView list3;
     ImageButton atras2;
-   // RESTAURANTE_ADAPTAR adapter;
+    MenuAdapter adapter;
 
     ArrayList<Menus> list_data2 = new ArrayList<Menus>();
     @Override
@@ -51,14 +50,17 @@ public class ELIMINAR_MENU extends AppCompatActivity {
 
                 list_data2.remove(position);
 
-                //adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged();
             }
         });
     }
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
-        client.delete ("http://192.168.100.71:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
+        client.get ("http://192.168.100.102:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
+            }
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray jsonArray) {
 
@@ -74,8 +76,8 @@ public class ELIMINAR_MENU extends AppCompatActivity {
                         //menus.setFoto(object.getString("foto"));
                         list_data2.add(menus);
                     }
-                    //adapter =  new RESTAURANTE_ADAPTAR(ELIMINAR_MENU.this,list_data2);
-                    //list3.setAdapter(adapter);
+                    adapter =  new MenuAdapter(ELIMINAR_MENU.this,list_data2);
+                    list3.setAdapter(adapter);
 
 
                 }catch (JSONException e) {
@@ -86,7 +88,9 @@ public class ELIMINAR_MENU extends AppCompatActivity {
 
         });
 
-    }
 
+
+
+    }
 
 }

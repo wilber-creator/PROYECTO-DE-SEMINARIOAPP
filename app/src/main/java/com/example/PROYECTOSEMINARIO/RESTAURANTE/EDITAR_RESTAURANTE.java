@@ -32,7 +32,6 @@ public class EDITAR_RESTAURANTE extends AppCompatActivity {
         nombre1 = findViewById(R.id.namerestorantED);
         telefono1 = findViewById(R.id.phonerestorantED);
         calle1 = findViewById(R.id.streetrestorantED);
-
         informacion();
         guardar = findViewById(R.id.guardarestorantED);
         guardar.setOnClickListener(new View.OnClickListener() {
@@ -58,8 +57,6 @@ public class EDITAR_RESTAURANTE extends AppCompatActivity {
         telefono1.setText(telefonores);
         calle1.setText(calleres);
     }
-    //METODO PATCH RESTAURANTE
-
     public void sedData() {
         TextView  nombre4 = findViewById(R.id.namerestorantED);
         TextView telefono4 = findViewById(R.id.phonerestorantED);
@@ -67,6 +64,8 @@ public class EDITAR_RESTAURANTE extends AppCompatActivity {
 
         AsyncHttpClient client = new AsyncHttpClient();
         //client.addHeader("authorization", Data.TOKEN);
+
+
         RequestParams params = new RequestParams();
 
         params.put("name", nombre4.getText().toString());

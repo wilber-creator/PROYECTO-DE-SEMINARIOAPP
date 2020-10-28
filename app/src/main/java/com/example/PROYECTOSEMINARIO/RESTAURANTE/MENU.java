@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-//import collects1.RESTAURANTE_ADAPTAR;
+import collects1.MenuAdapter;
 import collects1.Menus;
 import cz.msebera.android.httpclient.Header;
 
@@ -49,24 +49,24 @@ public class MENU extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder (MENU.this);
                 LayoutInflater inflater = (MENU.this).getLayoutInflater();
                 builder.setTitle("Cantidad");
-                //builder.setView(inflater.inflate(R.layout.dialogo, null));
-                /*builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+               // builder.setView(inflater.inflate(R.layout.dialogo, null));
+                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
 
 
-                        Intent i = new Intent(MENU.this, Carrito.class);
-                        i.putExtra("nombre", menus.nombre);
-                        i.putExtra("descripcion", menus.descripcion);
-                        i.putExtra("precio", menus.precio);
+                       // Intent i = new Intent(MENU.this, Carrito.class);
+                        //i.putExtra("nombre", menus.nombre);
+                       // i.putExtra("descripcion", menus.descripcion);
+                       // i.putExtra("precio", menus.precio);
                         // i.putExtra ("image",item.foto);
 
-                        startActivity(i);
+                       // startActivity(i);
 
 
                     }
-                });*/
+                });
                 builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -83,7 +83,7 @@ public class MENU extends AppCompatActivity {
     }
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
-        client.get ("http://192.168.1.102:7777/api/v1.0/menus",  new JsonHttpResponseHandler(){
+        client.get ("http://192.168.100.102:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 
@@ -99,8 +99,8 @@ public class MENU extends AppCompatActivity {
                         //menus.setFoto(object.getString("foto"));
                         list_data.add(menus);
                     }
-                    //RESTAURANTE_ADAPTAR adapter =  new RESTAURANTE_ADAPTAR(MENU.this,list_data);
-                    //lista.setAdapter(adapter);
+                    MenuAdapter adapter =  new MenuAdapter(MENU.this,list_data);
+                    lista.setAdapter(adapter);
 
 
                 }catch (JSONException e) {

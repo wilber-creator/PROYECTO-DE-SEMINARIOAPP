@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.FirstFragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PRIMER_FRACMENTO"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/First2Fragment"
-        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.First2Fragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.SEGUNDO_FRACMENTO"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first2">
 
@@ -47,7 +47,7 @@
     </fragment>
     <fragment
         android:id="@+id/First3Fragment"
-        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.First3Fragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.TERCER_FRACMENTO"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first3">
 
@@ -67,7 +67,27 @@
     </fragment>
     <fragment
         android:id="@+id/First4Fragment"
-        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.First4Fragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.CUARTO_FRACMENTO"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first4">
+
+        <action
+            android:id="@+id/action_First4Fragment_to_Second4Fragment"
+            app:destination="@id/Second4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Second4Fragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.Second4Fragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second4">
+
+        <action
+            android:id="@+id/action_Second4Fragment_to_First4Fragment"
+            app:destination="@id/First4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/First4Fragment"
+        android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.CUARTO_FRACMENTO"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first4">
 

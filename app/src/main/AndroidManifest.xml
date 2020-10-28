@@ -8,26 +8,58 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <!--para cambiar el icono del inicio en android:icon se pone la direccion de la imagen-->
     <application
         android:allowBackup="true"
-        android:icon="@drawable/churrasco_alimentos_a_carne_o_jantar_background"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS"></activity>
-        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENU" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_MAIN"></activity>
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTES_MAIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PRUEBA_MAIL" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_FACTURA" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_PEDIDOS_MENU_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_PEDIDOS_ADMI" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_PEDIDOS_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PMAPA" />
+        <activity
+            android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.LOGIN_ADMIN"
+            android:label="@string/title_activity_login1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_PEDIDOS_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VENTANA_MENU_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.INFO_MENU" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_CLIENTE" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.INFO_REST_CA" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_CLIENTE" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_PEDIDO" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_PEDIDO" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_ADMIN" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_MENU_1" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENIU" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PEDIDOS" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.MENU" />
-        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.IMAGEN_RESTAURANTE" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.MAPAS_ACTIVITY" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.LUGAR" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.INFO_PEDIDOS" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.RESTAURANTE_FOTO" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.ELIMINAR_MENU" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_MENU" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_CLIENTE" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_1" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.CREAR_MENU" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.INFO_RESTAURANTE" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_ADMINISTRADOR" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.CLIENTE" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_USUARIO" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_2" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_1" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.ADMINISTRADOR" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_RESTAURANTE" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.EDITAR_RESTAURANTE" />
         <activity
@@ -35,7 +67,11 @@
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.MAIN_ACTIVITY"
+            android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.IMAGEN_1"
+            android:label="@string/title_activity_imagen1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.ACTIVIDAD_MAIN"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

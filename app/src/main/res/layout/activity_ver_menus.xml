@@ -4,22 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/e_commerce_taobao_summer_food"
+    android:background="@drawable/patrcio_verde"
     tools:context=".VER_MENUS">
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="16dp"
-        android:text="Restaurantes"
+        android:layout_marginTop="24dp"
+        android:text="Ver Menus "
 
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/colorAccent3"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/atrasVR"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:background="?attr/homeAsUpIndicator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,9 +44,11 @@
         android:layout_height="620dp"
         android:layout_below="@+id/atrasVR"
 
+        android:layout_marginTop="20dp"
         android:background="@color/colorAccent3"
         android:cacheColorHint="@color/colorAccent3"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atrasVR"
         tools:ignore="MissingConstraints,ObsoleteLayoutParam"
         tools:layout_editor_absoluteX="16dp" />
 
