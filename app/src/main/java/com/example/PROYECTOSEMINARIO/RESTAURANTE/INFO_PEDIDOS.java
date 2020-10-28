@@ -42,7 +42,7 @@ public class INFO_PEDIDOS extends AppCompatActivity {
         cantidadVPAD.setText( getIntent().getExtras().getString("cantidad"));
 
 
-        //informacion();
+
 
         rb1=(RadioButton)findViewById(R.id.enviado);
         rb2=(RadioButton)findViewById(R.id.proceso);
@@ -103,21 +103,19 @@ public class INFO_PEDIDOS extends AppCompatActivity {
         _id = intent.getString("id");
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
 
-       // params.put("lugar_envio", lugar_envioVPAD.getText().toString());
-      //  params.put("cantidad", cantidadVPAD.getText().toString());
-       // params.put("cantidad", cantidadVPAD.getText().toString());
-        params.put("estado",result);
-      //  params.put("email", email4.getText().toString());
 
-        //Toast.makeText(getApplicationContext(),Data.REGISTER_CLIENTE+"/"+Data.ID_User,Toast.LENGTH_LONG).show();
+        params.put("estado",result);
+
+
+
         client.patch(Data.REGISTER_ORDEN+"?id="+_id, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
                 try {
                     String res=response.getString("msn");

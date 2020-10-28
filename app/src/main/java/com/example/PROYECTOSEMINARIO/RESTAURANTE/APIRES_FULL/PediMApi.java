@@ -18,7 +18,7 @@ public class PediMApi {
 
     }
     public void loadPed(String dato){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data.REGISTER_ORDEN_menu+"/"+dato,new JsonHttpResponseHandler(){

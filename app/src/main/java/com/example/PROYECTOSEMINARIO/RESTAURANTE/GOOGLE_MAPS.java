@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 
-public class PMAPA extends AppCompatActivity {
+public class GOOGLE_MAPS extends AppCompatActivity {
     GoogleMap googleMap;
     MapView mapView;
 

@@ -39,7 +39,6 @@ public class CREAR_MENU extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_menu);
-        //istcrear=findViewById(R.id.);
         foto = findViewById (R.id.tomarfotoCM);
         producto = findViewById(R.id.productoCM);
         precio = findViewById(R.id.precioproductoCM);
@@ -50,7 +49,6 @@ public class CREAR_MENU extends AppCompatActivity {
         _id.setText( getIntent().getExtras().getString("_id"));
 
 
-       // imagen = findViewById (R.id.fotomenu);
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +58,7 @@ public class CREAR_MENU extends AppCompatActivity {
         });
 
 
-       // loadComponents();
+
 
     }
 
@@ -71,7 +69,7 @@ public class CREAR_MENU extends AppCompatActivity {
         final EditText precio  = findViewById(R.id.precioproductoCM);
         final EditText descripcion = findViewById(R.id.descripcionCM);
 
-        //final ImageView image = findViewById (R.id.fotomenu);
+
 
         if (nombre.getText().toString().equals("") || precio.getText().toString().equals("") || descripcion.getText().toString().equals("")){
             Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show();
@@ -81,7 +79,7 @@ public class CREAR_MENU extends AppCompatActivity {
 
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
@@ -94,7 +92,7 @@ public class CREAR_MENU extends AppCompatActivity {
 
         client .post(Data.REGISTER_MENUS, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
 
 
@@ -112,26 +110,12 @@ public class CREAR_MENU extends AppCompatActivity {
                     alertDialog.setMessage(msn);
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {/*
-                                    Intent camera = new Intent(REGISTRAR_RESTAURANTE.this, FotoRestaurant.class);
-                                    REGISTRAR_RESTAURANTE.this.startActivity(camera);*/
+                                public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
                                 }
                             });
                     alertDialog.show();
-                   /*
-                    String id = response.getString("id");
-                    int resp = response.getInt("resp");
 
-                    if(resp==200){
-                        String msn = response.getString("msn");
-
-                        nombre.getText().clear();
-                        precio.getText().clear();
-                        descripcion.getText().clear();
-                        //loadComponents();
-
-                    }*/
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -140,39 +124,5 @@ public class CREAR_MENU extends AppCompatActivity {
 
 
         });
-    }/*
-    private void loadComponents() {
-        AsyncHttpClient client = new AsyncHttpClient ();
-        client.get ("http://192.168.100.180:8000/api/1.0/menus",  new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-
-                try {
-                    JSONArray data = response.getJSONArray("result");
-                    for (int i =0 ; i < data.length(); i++) {
-                        Menus menus = new Menus();
-                        JSONObject object = data.getJSONObject(i);
-                        menus.setId(object.getString("_id"));
-                        menus.setNombre(object.getString("nombre"));
-                        menus.setDescripcion(object.getString("descripcion"));
-                        menus.setPrecio(object.getInt("precio"));
-                        // menus.setFoto(object.getString("foto"));
-
-
-                        list_data.add(menus);
-                    }
-                    MenuAdapter adapter =  new MenuAdapter(CREAR_MENU.this,list_data);
-                    listcrear.setAdapter(adapter);
-
-
-                }catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-
-        });
-
-    }*/
+    }
 }

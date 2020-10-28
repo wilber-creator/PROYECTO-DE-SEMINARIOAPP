@@ -67,7 +67,7 @@ public class EDITAR_CLIENTE extends AppCompatActivity {
         TextView correo4 = findViewById(R.id.correoEC);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
         Bundle intent = getIntent().getExtras();
         _id = intent.getString("_id");
@@ -78,10 +78,10 @@ public class EDITAR_CLIENTE extends AppCompatActivity {
         params.put("ci", ci4.getText().toString());
         params.put("telefono", phone4.getText().toString());
         params.put("email", correo4.getText().toString());
-        // Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
+
         client.patch(Data.REGISTER_CLIENTE+"?id="+_id ,params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
                 try {
                     String res=response.getString("msn");

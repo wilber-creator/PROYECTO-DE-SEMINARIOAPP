@@ -32,7 +32,7 @@ public class MenuAdapter1 extends BaseAdapter {
     public MenuAdapter1(ArrayList<EsMenu> data, Context context) {
         LISTMENU = data;
         this.context = context;
-        // this.listem=listem;
+
 
 
     }
@@ -103,9 +103,8 @@ public class MenuAdapter1 extends BaseAdapter {
                     intent.putExtra("descripcion",descripcion.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
+
 
                 }
             });
@@ -133,9 +132,6 @@ public class MenuAdapter1 extends BaseAdapter {
 
                         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 
-                        // loadComponents();
-                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
-                                        adapter.notifyDataSetChanged();9*/
 
 
                     } else {

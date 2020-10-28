@@ -30,7 +30,7 @@ public class EDITAR_PEDIDO extends AppCompatActivity {
 
         lugar_envio1 = findViewById(R.id.luegar_envioEP);
         cantidad1 = findViewById(R.id.cantidadEP);
-       // pago_total1 = findViewById(R.id.pago_totalEP);
+
         informacion();
         guardar = findViewById(R.id.guardarpedidoDP);
         guardar.setOnClickListener(new View.OnClickListener() {
@@ -46,31 +46,30 @@ public class EDITAR_PEDIDO extends AppCompatActivity {
 
         lugar_envioP = intent.getString("lugar_envio");
         cantidadP = intent.getString("cantidad");
-       // pago_totalP = intent.getString("precios");
+
         id = intent.getString("id");
 
         lugar_envio1.setText(lugar_envioP);
         cantidad1.setText(cantidadP);
-        //pago_total1.setText(pago_totalP);
+
     }
     public void sedData() {
         TextView   lugar_envio4 = findViewById(R.id.luegar_envioEP);
         TextView cantidad4 = findViewById(R.id.cantidadEP);
-        //TextView pago_total4 = findViewById(R.id.pago_totalEP);
+
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
 
         params.put("lugar_envio", lugar_envio4.getText().toString());
         params.put("cantidad", cantidad4.getText().toString());
-       // params.put("precios", pago_total4.getText().toString());
-        // Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
+
+
         client.patch(Data.REGISTER_ORDEN+"?id="+id ,params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
 
                 try {
                     String res=response.getString("msn");

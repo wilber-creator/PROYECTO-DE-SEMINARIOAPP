@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class PRUEBA_MAIL extends AppCompatActivity {
+public class CORREO_ELECTRONICO extends AppCompatActivity {
     EditText correo,titulo,texto;
     Button enviar;
     @Override

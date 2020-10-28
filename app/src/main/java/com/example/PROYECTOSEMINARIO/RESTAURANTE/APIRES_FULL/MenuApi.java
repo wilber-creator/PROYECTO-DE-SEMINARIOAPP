@@ -18,7 +18,7 @@ public class MenuApi {
 
     }
     public void loadMenu(){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data. REGISTER_MENUS,new JsonHttpResponseHandler(){

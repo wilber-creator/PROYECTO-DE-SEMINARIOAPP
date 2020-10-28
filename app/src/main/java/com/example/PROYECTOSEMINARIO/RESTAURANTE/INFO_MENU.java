@@ -16,12 +16,7 @@ public class INFO_MENU extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info__menus_c);
-/*
-        crear = findViewById(R.id.crearmenuIR);
-        ver = findViewById(R.id.vermenuIR);
-        edit = findViewById(R.id.editarmenuIR);
-        delete = findViewById(R.id.elimenuIR);
-*/
+
         atrasIMVC = findViewById(R.id.atrasIMVC);
         atrasIMVC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,10 +33,7 @@ public class INFO_MENU extends AppCompatActivity {
         descripcion.setText( getIntent().getExtras().getString("descripcion"));
 
 
-/*
-        final TextView propietario=(TextView) findViewById(R.id.propertyIRV);
-        propietario.setText( getIntent().getExtras().getString("propietario"));
-*/
+
 
         String _id_de_mi_restaurant=getIntent().getExtras().getString("_id");
     }

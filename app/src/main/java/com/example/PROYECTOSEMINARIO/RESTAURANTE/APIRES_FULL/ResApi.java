@@ -18,7 +18,7 @@ public class ResApi {
 
     }
     public void loadRes(String nick){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data.REGISTER_RESTORANT+"/"+nick,new JsonHttpResponseHandler(){

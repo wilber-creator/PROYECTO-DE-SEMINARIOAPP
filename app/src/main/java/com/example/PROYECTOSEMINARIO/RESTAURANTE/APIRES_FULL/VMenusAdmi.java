@@ -18,7 +18,6 @@ public class VMenusAdmi {
 
     }
     public void loadMenu(String nick){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
 
 
         client.get(Data. REGISTER_MENUS+"/"+nick,new JsonHttpResponseHandler(){

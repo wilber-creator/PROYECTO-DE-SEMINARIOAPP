@@ -58,7 +58,7 @@ public class EDITAR_MENU_1 extends AppCompatActivity {
         TextView detalle4 = findViewById(R.id.detallemenuED);
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
@@ -66,10 +66,10 @@ public class EDITAR_MENU_1 extends AppCompatActivity {
         params.put("nombre", nombre4.getText().toString());
         params.put("precio", precio4.getText().toString());
         params.put("descripcion", detalle4.getText().toString());
-        // Toast.makeText(getApplicationContext(),Data.REGISTER_RESTORANT+"/"+Data.ID_RESTORANT,Toast.LENGTH_LONG).show();
+
         client.patch(Data.REGISTER_MENUS+"?id="+id ,params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
                 try {
                     String res=response.getString("msn");

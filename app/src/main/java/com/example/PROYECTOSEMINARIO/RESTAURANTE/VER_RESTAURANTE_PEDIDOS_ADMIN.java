@@ -53,7 +53,7 @@ public class VER_RESTAURANTE_PEDIDOS_ADMIN extends AppCompatActivity implements 
     public void onJsonArrayLoad(JSONArray data) {
 
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsPADRestaurante item= new EsPADRestaurante();
             try {
@@ -91,7 +91,7 @@ public class VER_RESTAURANTE_PEDIDOS_ADMIN extends AppCompatActivity implements 
 
         }
         ResPeAdAdapter adapter=new ResPeAdAdapter(datos, VER_RESTAURANTE_PEDIDOS_ADMIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
 
     }

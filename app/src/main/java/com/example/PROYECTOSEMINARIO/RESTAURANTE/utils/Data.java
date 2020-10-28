@@ -2,7 +2,6 @@ package com.example.PROYECTOSEMINARIO.RESTAURANTE.utils;
 
 public class Data {
     public static String TOKEN = "Data eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGVpdmlkMTM0NTZAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMiIsImlhdCI6MTU0NDIyMDMzOX0.SrZWEwHM0BUNp5o98g0fipyX5x7SRcCXr_dkfCMrnYs";
-   // public static String FOTO="http://192.168.100.102:8000";
     public static  String  HOST  = "http://192.168.100.102:8000/api/1.0";
     public static  String  REGISTER_RESTORANT = HOST + "/restaurante";
     public static String UPLOAD_RESTORANT = HOST + "/uploadrestaurant";

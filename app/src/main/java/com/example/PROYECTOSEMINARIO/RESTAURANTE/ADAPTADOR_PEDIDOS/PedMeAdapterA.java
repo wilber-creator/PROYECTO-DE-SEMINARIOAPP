@@ -94,9 +94,7 @@ public class PedMeAdapterA extends BaseAdapter {
                     // intent.putExtra("pago_total",pago_total.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });
@@ -115,9 +113,7 @@ public class PedMeAdapterA extends BaseAdapter {
                     intent.putExtra("correoC",correoC.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                }
             });

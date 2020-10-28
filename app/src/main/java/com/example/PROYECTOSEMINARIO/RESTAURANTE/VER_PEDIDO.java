@@ -61,7 +61,7 @@ public class VER_PEDIDO extends AppCompatActivity implements onLoadData {
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsPedido item= new EsPedido();
             try {
@@ -110,7 +110,7 @@ public class VER_PEDIDO extends AppCompatActivity implements onLoadData {
 
         }
         PedAdapter adapter=new PedAdapter(datos, VER_PEDIDO.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
 
     }

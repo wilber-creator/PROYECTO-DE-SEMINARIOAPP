@@ -18,7 +18,7 @@ public class PediCli {
 
     }
     public void loadPed(String orden){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data.REGISTER_ORDEN+"/"+orden,new JsonHttpResponseHandler(){

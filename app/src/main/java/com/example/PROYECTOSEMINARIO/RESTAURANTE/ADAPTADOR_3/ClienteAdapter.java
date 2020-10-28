@@ -20,7 +20,6 @@ public class ClienteAdapter extends BaseAdapter {
     public ClienteAdapter(ArrayList<EsCliente> data, Context context) {
         LISTCLIENT = data;
         this.context = context;
-        // this.listem=listem;
 
 
     }
@@ -59,33 +58,7 @@ public class ClienteAdapter extends BaseAdapter {
             Button eliminar = convertView.findViewById(R.id.eliminarVM);
             Button editar = convertView.findViewById(R.id.editarVM);
             id = this.LISTCLIENT.get(position).getId();
-            /*
-            eliminar.setOnClickListener(new View.OnClickListener() {
 
-                @Override
-                public void onClick(View v) {
-
-                    Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
-                    deleteMenu(id);
-                }
-            });
-
-            editar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, EDITAR_MENU_1.class);
-
-                    intent.putExtra("nombre",nombre.getText());
-                    intent.putExtra("precio",precio.getText());
-                    intent.putExtra("descripcion",descripcion.getText());
-                    intent.putExtra("id",id);
-                    context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
-
-            /*    }
-            });*/
 
         }
 

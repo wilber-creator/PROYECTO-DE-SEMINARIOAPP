@@ -33,9 +33,9 @@ public class LUGAR extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lugar);
-        atras3 = findViewById(R.id.atrs2);
-        list1= this.findViewById (R.id.restaurants);
+       // setContentView(R.layout.activity_lugar);
+        //atras3 = findViewById(R.id.atrs2);
+        //list1= this.findViewById (R.id.restaurants);
         atras3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,6 @@ public class LUGAR extends AppCompatActivity {
 
 
                 startActivity(i);
-
 
             }
         });

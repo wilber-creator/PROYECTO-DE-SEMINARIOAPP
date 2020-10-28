@@ -25,7 +25,6 @@ public class CMenuAdapter extends BaseAdapter {
     public CMenuAdapter(ArrayList<EsMenuC> data, Context context) {
         LISTMENUCli = data;
         this.context = context;
-        // this.listem=listem;
 
 
     }
@@ -98,16 +97,7 @@ public class CMenuAdapter extends BaseAdapter {
             pedido.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Intent intent = new Intent(context, Crear_Pedido.class);
 
-                    //intent.putExtra("nombre",nombre.getText());
-                    //intent.putExtra("precio",precio.getText());
-                    //intent.putExtra("descripcion",descripcion.getText());
-                    //intent.putExtra("id",id);
-                    //context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
 
                 }
             });

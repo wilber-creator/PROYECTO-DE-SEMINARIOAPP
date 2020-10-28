@@ -59,16 +59,7 @@ public class LOGIN extends AppCompatActivity {
 
        btn_login = findViewById (R.id.login);
 
-       /* registrarse = findViewById(R.id.registrarse);
-        registrarse.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Login.this,RegistrarUsuario.class));
-                finish();
-            }
-
-        });*/
 
        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

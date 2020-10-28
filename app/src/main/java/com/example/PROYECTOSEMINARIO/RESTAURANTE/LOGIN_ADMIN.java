@@ -83,7 +83,7 @@ public class LOGIN_ADMIN extends AppCompatActivity {
         params.add("password", password.getText().toString());
         login.post(Data.REGISTER_LOGIN, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
                 AlertDialog alertDialog = new AlertDialog.Builder(LOGIN_ADMIN.this).create();
                 try {
 
@@ -127,7 +127,7 @@ public class LOGIN_ADMIN extends AppCompatActivity {
 
 
 
-                        //Toast.makeText(LOGIN.this, "Login correctamente: "+ token, Toast.LENGTH_SHORT).show();
+
                         Toast.makeText(LOGIN_ADMIN.this, "Login correctamente: ", Toast.LENGTH_SHORT).show();
                     }else{
                         Toast.makeText(LOGIN_ADMIN.this, "error de logueo", Toast.LENGTH_SHORT).show();

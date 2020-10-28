@@ -47,20 +47,19 @@ public class VENTANA_MENU_ADMIN extends AppCompatActivity {
         _id.setText( getIntent().getExtras().getString("id"));
 
 
-     //   _id.setText( getIntent().getExtras().getString("id"));
+
 
         CrearMenuAD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // startActivity(new Intent(ADMINISTRADOR.this,REGISTRAR_RESTAURANTE.class));
+
                 Intent t=new Intent(VENTANA_MENU_ADMIN.this, CREAR_MENU.class);
                 t.putExtra("calle",calle.getText());
                 t.putExtra("nombre",nombre.getText());
                 t.putExtra("telefono",telefono.getText());
                 t.putExtra("_id",_id.getText());
 
-           //     t.putExtra("id",_id.getText());
-                // t.putExtra("_id",_id);
+
                 startActivity(t);
             }
         });
@@ -68,7 +67,7 @@ public class VENTANA_MENU_ADMIN extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent t=new Intent(VENTANA_MENU_ADMIN.this, VER_MENUS_ADMIN.class);
-              //  t.putExtra("_id",_id.getText());
+
                 t.putExtra("_id",_id.getText());
                 startActivity(t);
 

@@ -64,7 +64,7 @@ public class EDITAR_1 extends AppCompatActivity {
     }
     public void informacion(){
         Intent intent = getIntent();
-        //idmenu = intent.getStringExtra("_id");
+
         titulo = intent.getStringExtra("nombre");
         descripcion = intent.getStringExtra("descripcion");
         precio = intent.getStringExtra("precio");
@@ -73,14 +73,14 @@ public class EDITAR_1 extends AppCompatActivity {
         descripcion1.setText(descripcion);
         precio1.setText(precio);
 
-        //image1.setImageURI(Uri.parse(img));
+
     }
     public void sedData() {
 
 
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
@@ -89,10 +89,10 @@ public class EDITAR_1 extends AppCompatActivity {
         params.put("precio", precio1.getText().toString());
         params.put("descripcion", descripcion1.getText().toString());
 
-        // Toast.makeText(getApplicationContext(),Data.REGISTER_CLIENTE+"/"+Data.ID_User,Toast.LENGTH_LONG).show();
+
         client.put(Data.REGISTER_MENUS+"/", params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
 
                 AlertDialog alertDialog = new AlertDialog.Builder(EDITAR_1.this).create();
@@ -170,17 +170,17 @@ public class EDITAR_1 extends AppCompatActivity {
 
     public void tomarFoto (View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        // Ensure that there's a camera activity to handle the intent
+
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-            // Create the File where the photo should go
+
             File photoFile = null;
             try {
                 photoFile = createImageFile();
             } catch (IOException ex) {
-                // Error occurred while creating the File
+
 
             }
-            // Continue only if the File was successfully created
+
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
                         "com.example.android.fileprovider",

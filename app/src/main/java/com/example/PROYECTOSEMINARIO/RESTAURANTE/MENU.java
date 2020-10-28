@@ -49,20 +49,10 @@ public class MENU extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder (MENU.this);
                 LayoutInflater inflater = (MENU.this).getLayoutInflater();
                 builder.setTitle("Cantidad");
-               // builder.setView(inflater.inflate(R.layout.dialogo, null));
+
                 builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
-
-
-                       // Intent i = new Intent(MENU.this, Carrito.class);
-                        //i.putExtra("nombre", menus.nombre);
-                       // i.putExtra("descripcion", menus.descripcion);
-                       // i.putExtra("precio", menus.precio);
-                        // i.putExtra ("image",item.foto);
-
-                       // startActivity(i);
 
 
                     }
@@ -96,7 +86,7 @@ public class MENU extends AppCompatActivity {
                         menus.setNombre(object.getString("nombre"));
                         menus.setDescripcion(object.getString("descripcion"));
                         menus.setPrecio(object.getInt("precio"));
-                        //menus.setFoto(object.getString("foto"));
+
                         list_data.add(menus);
                     }
                     MenuAdapter adapter =  new MenuAdapter(MENU.this,list_data);

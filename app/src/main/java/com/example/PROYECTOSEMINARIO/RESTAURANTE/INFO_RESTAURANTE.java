@@ -11,7 +11,8 @@ import android.widget.TextView;
 public class INFO_RESTAURANTE extends AppCompatActivity {
     Button crear,ver,edit,delete;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info__restaurante);
 

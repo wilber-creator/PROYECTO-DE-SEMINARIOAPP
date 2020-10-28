@@ -71,7 +71,7 @@ public class RESTAURANTE_FOTO extends AppCompatActivity {
                         client.post(Data.UPLOAD_RESTORANT, params, new JsonHttpResponseHandler(){
                             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                                 Toast.makeText(RESTAURANTE_FOTO.this, "EXITO", Toast.LENGTH_LONG).show();
-                                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
+
                             }
                         });
 
@@ -107,15 +107,15 @@ public class RESTAURANTE_FOTO extends AppCompatActivity {
     }
     private BitmapStruct saveToInternalStorage(Bitmap bitmapImage){
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
-        // path to /data/data/yourapp/app_data/imageDir
+
         File directory = cw.getDir("imageDir", Context.MODE_PRIVATE);
-        // Create imageDir
+
         File mypath=new File(directory,"profile.jpg");
 
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(mypath);
-            // Use the compress method on the BitMap object to write image to the OutputStream
+
             bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fos);
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,7 +131,7 @@ public class RESTAURANTE_FOTO extends AppCompatActivity {
         p.img = BitmapFactory.decodeFile(path);
         p.path = path;
         return p;
-        //return directory.getAbsolutePath();
+
     }
 
     @Override

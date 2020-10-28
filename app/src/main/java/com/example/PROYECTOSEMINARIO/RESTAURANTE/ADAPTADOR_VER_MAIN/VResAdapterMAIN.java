@@ -25,7 +25,6 @@ public class VResAdapterMAIN extends BaseAdapter {
 
     public ArrayList<EsVRestauranteMAIN> LISTRESTAURANTMAIN;
     public Context context;
-    // EsVRestaurante.editarRest listem;
 
 
 
@@ -36,7 +35,7 @@ public class VResAdapterMAIN extends BaseAdapter {
     public VResAdapterMAIN(ArrayList<EsVRestauranteMAIN> data, Context context){
         LISTRESTAURANTMAIN=data;
         this.context=context;
-        // this.listem=listem;
+
 
 
     }
@@ -118,9 +117,7 @@ public class VResAdapterMAIN extends BaseAdapter {
                     intent.putExtra("propietario",propietario.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });

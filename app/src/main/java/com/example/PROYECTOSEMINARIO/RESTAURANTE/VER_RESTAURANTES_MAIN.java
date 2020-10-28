@@ -45,7 +45,6 @@ public class VER_RESTAURANTES_MAIN extends AppCompatActivity implements onLoadDa
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
 
             EsVRestauranteMAIN item= new EsVRestauranteMAIN();
             try {
@@ -92,7 +91,7 @@ public class VER_RESTAURANTES_MAIN extends AppCompatActivity implements onLoadDa
 
         }
         VResAdapterMAIN adapter=new VResAdapterMAIN(datos, VER_RESTAURANTES_MAIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
     }
 

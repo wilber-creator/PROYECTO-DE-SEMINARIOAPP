@@ -104,7 +104,7 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
         }
         AsyncHttpClient client = new AsyncHttpClient();
 
-        //client.addHeader("authorization", Data.TOKEN);
+
 
 
         RequestParams params = new RequestParams();
@@ -118,63 +118,19 @@ public class REGISTRAR_USUARIO extends AppCompatActivity {
 
         client .post(Data.REGISTER_CLIENTE, params, new JsonHttpResponseHandler() {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONArray) was not overriden, but callback was received");
+
 
 
                 try {
 
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                 //  Intent  pruebaED=new Intent(EDITAR_RESTAURANTE.this,VER_RESTAURANTE_1.class);
-                   //startActivity(pruebaED);
+
                 } catch (JSONException e) {
 
                     e.printStackTrace();
                 }
-
-
-
-              /*  AlertDialog alertDialog = new AlertDialog.Builder(REGISTRAR_USUARIO.this).create();
-                try {
-
-
-                    int resp = response.getInt("resp");
-                    if(resp==200){
-                        String msn = response.getString("msn");
-                        JSONObject json=response.getJSONObject("dato");
-                        final String email_resp=json.getString("email");
-                        final String password_resp=json.getString("password");
-                        alertDialog.setTitle("Mensaje");
-                        alertDialog.setMessage(msn);
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent intent =new Intent(REGISTRAR_USUARIO.this, LOGIN.class);
-                                //intent.putExtra("em",email_resp);
-                                intent.putExtra("email",email_resp);
-                                intent.putExtra("password",password_resp);
-                                startActivity(intent);
-                                finish();
-                            }
-                        });
-                        alertDialog.show();
-                    }else{
-                        alertDialog.setTitle("Mensaje");
-                        alertDialog.setMessage("Error al tratar de crear nuevo usuario");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-                        alertDialog.show();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }*/
             }
-
-
         });
 
     }

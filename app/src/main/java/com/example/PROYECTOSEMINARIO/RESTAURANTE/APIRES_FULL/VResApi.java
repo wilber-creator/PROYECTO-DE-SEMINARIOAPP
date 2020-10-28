@@ -18,7 +18,7 @@ public class VResApi {
 
     }
     public void loadRes(){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data.REGISTER_RESTORANT,new JsonHttpResponseHandler(){

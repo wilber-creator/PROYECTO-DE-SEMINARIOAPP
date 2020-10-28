@@ -52,7 +52,7 @@ public class EDITAR_MENU extends AppCompatActivity {
                 i.putExtra ("nombre", menus.nombre);
                 i.putExtra ("descripcion", menus.descripcion);
                 i.putExtra ("precio",menus.precio);
-                //i.putExtra("_id", menus.id);
+
 
                 startActivity(i);
 

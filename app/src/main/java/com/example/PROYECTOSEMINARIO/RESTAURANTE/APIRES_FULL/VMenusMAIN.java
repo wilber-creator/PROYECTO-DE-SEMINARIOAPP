@@ -18,7 +18,7 @@ public class VMenusMAIN {
 
     }
     public void loadMenu(String dato){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data. REGISTER_MENUS+"/?id="+dato,new JsonHttpResponseHandler(){

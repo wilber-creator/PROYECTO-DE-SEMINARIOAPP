@@ -66,7 +66,7 @@ public class VER_MENUS_PEDIDOS_ADMI extends AppCompatActivity implements onLoadD
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsPADMenus item= new EsPADMenus();
             try {
@@ -104,7 +104,7 @@ public class VER_MENUS_PEDIDOS_ADMI extends AppCompatActivity implements onLoadD
 
         }
         MenPeAdAdapter adapter=new MenPeAdAdapter(datos, VER_MENUS_PEDIDOS_ADMI.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
     }
 

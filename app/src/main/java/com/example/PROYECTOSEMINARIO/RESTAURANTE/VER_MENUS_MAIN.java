@@ -52,7 +52,7 @@ public class VER_MENUS_MAIN extends AppCompatActivity implements onLoadData {
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsMenuMain item= new EsMenuMain();
             try {
@@ -90,7 +90,7 @@ public class VER_MENUS_MAIN extends AppCompatActivity implements onLoadData {
 
         }
         CMenuAdapterMain adapter=new CMenuAdapterMain(datos, VER_MENUS_MAIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
     }
 

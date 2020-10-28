@@ -29,37 +29,16 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_restaurante1);
-        /*
-        atrasVR = findViewById(R.id.imatras);
-        atrasVR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(EDITAR_MENU.this,InfoRestaurant.class));
 
-            }
-        });*/
         listares = findViewById(R.id.lisrestaurant2);
 
         Bundle intent = getIntent().getExtras();
         id = intent.getString("_id");
 
         ResApi api= new ResApi(this);
-        //api.loadRes();
-        api.loadRes(id);
-        /*
-        for (int i = 0; i < 100; i++) {
-            //datos.add("item" + i);
 
-            EsRestaurante item= new EsRestaurante();
-            item.setNombre("nombre"+ i);
-            item.setTelefono("telefono" + i);
-            item.setCalle("calle"+ i);
-            item.setImagen("No IMAGE");
-            datos.add(item);
-        }
-        ResAdapter1 adapter=new ResAdapter1(datos,this.getBaseContext());
-       // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
-        listares.setAdapter(adapter);*/
+        api.loadRes(id);
+
     }
 
     @Override
@@ -70,7 +49,7 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsRestaurante item= new EsRestaurante();
             try {
@@ -108,7 +87,7 @@ public class VER_RESTAURANTE_1 extends AppCompatActivity implements onLoadData {
 
         }
         ResAdapter1 adapter=new ResAdapter1(datos, VER_RESTAURANTE_1.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
 
     }

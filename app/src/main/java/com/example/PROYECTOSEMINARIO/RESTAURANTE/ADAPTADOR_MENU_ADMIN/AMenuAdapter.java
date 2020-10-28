@@ -32,8 +32,6 @@ public class AMenuAdapter extends BaseAdapter {
     public AMenuAdapter(ArrayList<EsMenuA> data, Context context) {
         LISTMENUAdmi = data;
         this.context = context;
-        // this.listem=listem;
-
 
     }
 
@@ -111,9 +109,7 @@ public class AMenuAdapter extends BaseAdapter {
                     intent.putExtra("precio",precio.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });
@@ -139,9 +135,6 @@ public class AMenuAdapter extends BaseAdapter {
 
                         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 
-                        // loadComponents();
-                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
-                                        adapter.notifyDataSetChanged();9*/
 
 
                     } else {

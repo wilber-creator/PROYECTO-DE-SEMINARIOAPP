@@ -18,7 +18,7 @@ public class PedApi {
 
     }
     public void loadPed(){
-        //token //client.addHeader("authorization",UserDataServer.TOKEN);
+
 
 
         client.get(Data.REGISTER_ORDEN,new JsonHttpResponseHandler(){

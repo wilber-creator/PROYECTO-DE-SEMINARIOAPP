@@ -20,7 +20,7 @@ public class MenuAdapter extends BaseAdapter {
     public MenuAdapter(ArrayList<EsMenu> data, Context context) {
         LISTMENU = data;
         this.context = context;
-        // this.listem=listem;
+
 
 
     }

@@ -97,28 +97,7 @@ public class ResAdapter1 extends BaseAdapter {
 
                 @Override
                 public void onClick(View v) {
-                   // Toast.makeText(this,"eliminado",Toast.LENGTH_SHORT).show();
-/*
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                    // Add the buttons
-                    builder.setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
 
-
-                            // User clicked OK button
-                            deleteMenu(id);
-                        }
-                    });
-                    builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            // User cancelled the dialog
-                        }
-                    });
-                    builder.setTitle("Esta seguro de eliminar el menu");
-
-
-                    AlertDialog dialog = builder.create();*/
-                    //dialog.show();
                     Toast.makeText(context, "eliminado el restaurante id ="+id, Toast.LENGTH_LONG).show();
                     deleteMenu(id);
 
@@ -138,9 +117,7 @@ public class ResAdapter1 extends BaseAdapter {
                 intent.putExtra("calle",calle.getText());
                 intent.putExtra("id",id);
                 context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });
@@ -155,9 +132,7 @@ public class ResAdapter1 extends BaseAdapter {
                     intentM.putExtra("calle",calle.getText());
                     intentM.putExtra("id",id);
                     context.startActivity(intentM);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });
@@ -184,9 +159,7 @@ public class ResAdapter1 extends BaseAdapter {
 
                         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 
-                        // loadComponents();
-                                /*BorrarMenuAdapter adapter = new BorrarMenuAdapter(view);
-                                        adapter.notifyDataSetChanged();9*/
+
 
 
                     } else {

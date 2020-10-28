@@ -60,7 +60,7 @@ public class VER_MENIU extends AppCompatActivity {
                         menus.setNombre(object.getString("nombre"));
                         menus.setDescripcion(object.getString("descripcion"));
                         menus.setPrecio(object.getInt("precio"));
-                        //menus.setFoto(object.getString("foto"));
+
                         list_data.add(menus);
                     }
                     VerMenuAdapter adapter =  new VerMenuAdapter(VER_MENIU.this,list_data);

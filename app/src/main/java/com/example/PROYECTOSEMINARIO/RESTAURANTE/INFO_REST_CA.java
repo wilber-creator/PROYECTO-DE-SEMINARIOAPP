@@ -44,33 +44,6 @@ public class INFO_REST_CA extends AppCompatActivity {
 
         String _id_de_mi_restaurant=getIntent().getExtras().getString("_id");
 
-       /*
-        crear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(INFO_RESTAURANTE.this,CREAR_MENU.class));
 
-            }
-        });
-        ver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(INFO_RESTAURANTE.this,VER_MENIU.class));
-
-            }
-        });
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(INFO_RESTAURANTE.this,EDITAR_MENU.class));
-            }
-        });
-        ver.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(INFO_RESTAURANTE.this,ELIMINAR_MENU.class));
-
-            }
-        });*/
     }
 }

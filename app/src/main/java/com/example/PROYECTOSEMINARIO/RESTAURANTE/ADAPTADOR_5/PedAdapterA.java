@@ -74,7 +74,7 @@ public class PedAdapterA extends BaseAdapter {
 
             final String id;
 
-            //Button eliminar = convertView.findViewById(R.id.eliminarVP);
+
             Button info = convertView.findViewById(R.id.infoVPA);
             id = this.LISTPEDIDOSA.get(position).getId();
 
@@ -89,9 +89,7 @@ public class PedAdapterA extends BaseAdapter {
                     // intent.putExtra("pago_total",pago_total.getText());
                    intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });

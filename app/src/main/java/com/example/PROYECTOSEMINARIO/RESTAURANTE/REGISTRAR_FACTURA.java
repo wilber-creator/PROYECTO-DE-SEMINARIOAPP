@@ -79,8 +79,7 @@ public class REGISTRAR_FACTURA extends AppCompatActivity {
 
 
 
-        //titulo=(EditText) findViewById(R.id.titulofac);
-       // texto=(EditText) findViewById(R.id.textofac);
+
         enviar=(Button) findViewById(R.id.irpedidosfac);
 
         enviar.setOnClickListener(new View.OnClickListener() {

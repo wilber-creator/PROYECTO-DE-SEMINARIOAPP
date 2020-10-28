@@ -96,8 +96,7 @@ public class CLIENTE extends AppCompatActivity {
                 t.putExtra("tipo",tipo.getText());
                 t.putExtra("_id",_id.getText());
                 startActivity(t);
-                /*Bundle b=getIntent().getExtras();
-                Toast.makeText(getApplicationContext(),b.getString("nombreMod")+"",Toast.LENGTH_LONG).show();*/
+
 
             }
         });

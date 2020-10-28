@@ -73,7 +73,7 @@ public class ELIMINAR_MENU extends AppCompatActivity {
                         menus.setNombre(object.getString("nombre"));
                         menus.setDescripcion(object.getString("descripcion"));
                         menus.setPrecio(object.getInt("precio"));
-                        //menus.setFoto(object.getString("foto"));
+
                         list_data2.add(menus);
                     }
                     adapter =  new MenuAdapter(ELIMINAR_MENU.this,list_data2);

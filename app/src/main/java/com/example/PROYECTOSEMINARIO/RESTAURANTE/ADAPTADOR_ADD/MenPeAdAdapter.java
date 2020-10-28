@@ -24,7 +24,7 @@ public class MenPeAdAdapter extends BaseAdapter {
     public MenPeAdAdapter(ArrayList<EsPADMenus> data, Context context) {
         LISTMENUAdmiP = data;
         this.context = context;
-        // this.listem=listem;
+
 
 
     }

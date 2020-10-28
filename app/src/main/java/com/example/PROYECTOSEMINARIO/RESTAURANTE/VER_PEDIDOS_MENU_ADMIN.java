@@ -130,7 +130,7 @@ public class VER_PEDIDOS_MENU_ADMIN extends AppCompatActivity implements onLoadD
 
         }
         PedMeAdapterA adapter=new PedMeAdapterA(datos, VER_PEDIDOS_MENU_ADMIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
 
     }

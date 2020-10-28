@@ -20,9 +20,7 @@ import org.json.JSONObject;
 import cz.msebera.android.httpclient.Header;
 
 public class ADMINISTRADOR extends AppCompatActivity {
-/*
-    public ArrayList<EsCliente> LISTCLIENT;
-    public Context context;*/
+
     Button crearres,veres,VerMenusResAD;
     Button edicuenta1;
     Button elicuenta1,controlar;
@@ -33,14 +31,7 @@ public class ADMINISTRADOR extends AppCompatActivity {
     TextView tipo,_id;
     ImageButton atrasAD;
     static String em="";
-/*
-    public ADMINISTRADOR(ArrayList<EsCliente> data, Context context) {
-        LISTCLIENT = data;
-        this.context = context;
-        // this.listem=listem;
 
-
-    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +49,7 @@ public class ADMINISTRADOR extends AppCompatActivity {
         elicuenta1 = findViewById(R.id.elicuenta1);
         crearres =  findViewById(R.id.crestaurant);
         veres =  findViewById(R.id.verestaurant);
-     //   VerMenusResAD =  findViewById(R.id.VerMenusResAD);
+
         edicuenta1 = findViewById(R.id.edicuenta1);
         controlar = findViewById(R.id.irpedidos);
 
@@ -77,7 +68,7 @@ public class ADMINISTRADOR extends AppCompatActivity {
         _id=(TextView) findViewById(R.id.idadmi);
         _id.setText( getIntent().getExtras().getString("_id"));
 
-       // _id = this.LISTCLIENT.toString();
+
 
 
         controlar.setOnClickListener(new View.OnClickListener() {
@@ -116,17 +107,7 @@ public class ADMINISTRADOR extends AppCompatActivity {
 
             }
         });
-/*
-        VerMenusResAD.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent t=new Intent(ADMINISTRADOR.this,VENTANA_MENU_ADMIN.class);
-                t.putExtra("_id",_id.getText());
-                // t.putExtra("_id",_id);
-                startActivity(t);
 
-            }
-        });*/
         edicuenta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,8 +120,7 @@ public class ADMINISTRADOR extends AppCompatActivity {
                 t.putExtra("_id",_id.getText());
                 startActivity(t);
 
-                /*Bundle b=getIntent().getExtras();
-                Toast.makeText(getApplicationContext(),b.getString("nombreMod")+"",Toast.LENGTH_LONG).show();*/
+
 
             }
         });

@@ -49,15 +49,7 @@ public class REGISTRAR_RESTAURANTE extends AppCompatActivity {
             }
         });
 
-/*
-        map = findViewById(R.id.MapView1);
 
-        map.onCreate(savedInstanceState);
-        map.onResume();
-        MapsInitializer.initialize(this);
-        map.getMapAsync((OnMapReadyCallback) this);
-        geocoder = new Geocoder(getBaseContext(), Locale.getDefault());
-*/
         street = findViewById(R.id.streetrestorant);
         next = findViewById(R.id.crear);
         next.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +114,7 @@ public class REGISTRAR_RESTAURANTE extends AppCompatActivity {
         _id.setText( getIntent().getExtras().getString("_id"));
 
         AsyncHttpClient client = new AsyncHttpClient();
-        //client.addHeader("authorization", Data.TOKEN);
+
 
         RequestParams params = new RequestParams();
         params.add("name", name.getText().toString());
@@ -133,46 +125,23 @@ public class REGISTRAR_RESTAURANTE extends AppCompatActivity {
         params.add("phone", phone.getText().toString());
         params.add("cliente", _id.getText().toString());
 
-/*
-            Bundle intent = getIntent().getExtras();
-            _id = intent.getString("_id");
-
-        params.add("cliente", _id);*/
-       ///// params.add("lat", String.valueOf(""));
-        //params.add("lon", String.valueOf(""));
 
         client.post(Data.REGISTER_RESTORANT, params, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-              //  AlertDialog alertDialog = new AlertDialog.Builder(REGISTRAR_RESTAURANTE.this).create();
+
                 try {
                     String res=response.getString("msn");
                     Toast.makeText(getApplicationContext(),res,Toast.LENGTH_LONG).show();
-                   /* String id = response.getString("id");
-                    Data.ID_RESTORANT = id;
-                    String msn = response.getString("msn");*/
 
-                /*    alertDialog.setTitle("RESPONSE SERVER");
-                    alertDialog.setMessage(msn);
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {*/
-                                    /*
-                                    Intent camera = new Intent(REGISTRAR_RESTAURANTE.this, FotoRestaurant.class);
-                                    REGISTRAR_RESTAURANTE.this.startActivity(camera);*/
                 }
-                                  /*  dialog.dismiss();
-                                }
-                            });
-                    alertDialog.show();*/
-                   /* Intent  pruebaED=new Intent(REGISTRAR_RESTAURANTE.this,ADMINISTRADOR.class);
-                    startActivity(pruebaED);*/
+
                  catch (JSONException e) {
                     e.printStackTrace();
                 }
 
 
-                //AsyncHttpClient.log.w(LOG_TAG, "onSuccess(int, Header[], JSONObject) was not overriden, but callback was received");
+
             }
         });
 

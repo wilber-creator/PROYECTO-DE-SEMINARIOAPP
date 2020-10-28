@@ -32,27 +32,7 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
     private void loadComponents() {
         AsyncHttpClient client = new AsyncHttpClient ();
         client.get ("http://192.168.100.102:8000/api/1.0/restaurante",  new JsonHttpResponseHandler(){
-/*
-            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                try {
-                    JSONArray data = response.getJSONArray("");
-                    for (int i =0 ; i < data.length(); i++) {
-                        Restaurants res =new Restaurants();
-                        JSONObject object = data.getJSONObject(i);
-                        res.setNombre(object.getString("nombre"));
-                        res.setTelefono(object.getInt("telefono"));
-                        res.setCalle(object.getString("calle"));
-                        //menus.setFoto(object.getString("foto"));
-                        restaurants.add(res);
-                    }
-                    ResAdapter adapter =  new ResAdapter(VER_RESTAURANTE_2.this,restaurants);
-                    listares.setAdapter(adapter);
 
-
-                }catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }*/
 
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
 
@@ -70,7 +50,7 @@ public class VER_RESTAURANTE_2 extends AppCompatActivity {
                         res.setTelefono(object.getInt("phone"));
                         res.setCalle(object.getString("street"));
                         res.setImagen(object.getString("picture"));
-                        //menus.setFoto(object.getString("foto"));
+
                         restaurants.add(res);
                     }
                     ResAdapter2 adapter =  new ResAdapter2(VER_RESTAURANTE_2.this,restaurants);

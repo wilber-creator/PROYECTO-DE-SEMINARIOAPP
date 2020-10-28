@@ -103,9 +103,7 @@ public class ResPeAdAdapter extends BaseAdapter {
                     intent.putExtra("propietario",propietario.getText());
                     intent.putExtra("id",id);
                     context.startActivity(intent);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });
@@ -120,9 +118,7 @@ public class ResPeAdAdapter extends BaseAdapter {
                     intentM.putExtra("calle",calle.getText());
                     intentM.putExtra("id",id);
                     context.startActivity(intentM);
-/*
-                String EDRESTAURANTE=nombre.getText()+"/"+telefono.getText()+"/"+calle.getText()+"/"+id;
-                listem.EdRest(EDRESTAURANTE);*/
+
 
                 }
             });

@@ -29,32 +29,11 @@ public class VER_RESTAURANTE_ADMIN extends AppCompatActivity implements onLoadDa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_restaurante_admi);
-         /*
-        atrasVR = findViewById(R.id.imatras);
-        atrasVR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(EDITAR_MENU.this,InfoRestaurant.class));
 
-            }
-        });*/
         listares = findViewById(R.id.lisrestaurant3);
         ResApiAD api= new ResApiAD(this);
         api.loadRes();
-        /*
-        for (int i = 0; i < 100; i++) {
-            //datos.add("item" + i);
 
-            EsRestaurante item= new EsRestaurante();
-            item.setNombre("nombre"+ i);
-            item.setTelefono("telefono" + i);
-            item.setCalle("calle"+ i);
-            item.setImagen("No IMAGE");
-            datos.add(item);
-        }
-        ResAdapter1 adapter=new ResAdapter1(datos,this.getBaseContext());
-       // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
-        listares.setAdapter(adapter);*/
     }
 
 
@@ -66,7 +45,7 @@ public class VER_RESTAURANTE_ADMIN extends AppCompatActivity implements onLoadDa
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
+
 
             EsRestaurante item= new EsRestaurante();
             try {
@@ -104,7 +83,7 @@ public class VER_RESTAURANTE_ADMIN extends AppCompatActivity implements onLoadDa
 
         }
         ResAdapter1 adapter=new ResAdapter1(datos, VER_RESTAURANTE_ADMIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
     }
 

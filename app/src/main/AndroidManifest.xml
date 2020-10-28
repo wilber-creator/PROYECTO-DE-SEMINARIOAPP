@@ -19,12 +19,12 @@
         android:theme="@style/AppTheme">
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_MAIN"></activity>
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTES_MAIN" />
-        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PRUEBA_MAIL" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.CORREO_ELECTRONICO" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.REGISTRAR_FACTURA" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_PEDIDOS_MENU_ADMIN" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_MENUS_PEDIDOS_ADMI" />
         <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.VER_RESTAURANTE_PEDIDOS_ADMIN" />
-        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.PMAPA" />
+        <activity android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.GOOGLE_MAPS" />
         <activity
             android:name="com.example.PROYECTOSEMINARIO.RESTAURANTE.LOGIN_ADMIN"
             android:label="@string/title_activity_login1"

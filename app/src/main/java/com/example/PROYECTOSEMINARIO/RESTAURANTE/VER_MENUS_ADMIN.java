@@ -56,7 +56,7 @@ public class VER_MENUS_ADMIN extends AppCompatActivity  implements onLoadData {
 
 
         VMenusAdmi api= new VMenusAdmi(this);
-       // api.loadMenu(_id.getText().toString());
+
         api.loadMenu(id);
     }
 
@@ -68,7 +68,6 @@ public class VER_MENUS_ADMIN extends AppCompatActivity  implements onLoadData {
     @Override
     public void onJsonArrayLoad(JSONArray data) {
         for (int i = 0; i< data.length() ; i++) {
-            //datos.add("item" + i);
 
             EsMenuA item= new EsMenuA();
             try {
@@ -106,7 +105,7 @@ public class VER_MENUS_ADMIN extends AppCompatActivity  implements onLoadData {
 
         }
         AMenuAdapter adapter=new AMenuAdapter(datos, VER_MENUS_ADMIN.this);
-        // ArrayAdapter<String> adapter =new ArrayAdapter(this.getApplicationContext(),android.R.layout.simple_list_item_1,datos);
+
         listares.setAdapter(adapter);
     }
 
