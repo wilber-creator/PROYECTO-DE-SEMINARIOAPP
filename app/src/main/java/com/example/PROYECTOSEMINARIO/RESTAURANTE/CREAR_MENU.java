@@ -106,9 +106,9 @@ public class CREAR_MENU extends AppCompatActivity {
                     String id = response.getString("id");
                     Data.ID_RESTORANT = id;
                     String msn = response.getString("msn");
-                    alertDialog.setTitle("RESPONSE SERVER");
+                    alertDialog.setTitle("REGISTRO EXITOSAMENTE");
                     alertDialog.setMessage(msn);
-                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ACEPTAR",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();
