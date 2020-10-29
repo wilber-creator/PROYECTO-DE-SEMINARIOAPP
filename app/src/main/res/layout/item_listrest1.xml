@@ -39,17 +39,17 @@
 
             <TextView
                 android:id="@+id/nombreVM"
-                android:layout_width="290dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="153dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif-smallcaps"
-                android:hint="nombre 1"
+                android:hint="nombre"
                 android:textAlignment="center"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="20sp"
                 android:textStyle="normal|bold|italic"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.098"
+                app:layout_constraintHorizontal_bias="0.388"
                 app:layout_constraintStart_toEndOf="@+id/imagenVM"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,6 +73,7 @@
                 android:layout_width="179dp"
                 android:layout_height="21dp"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/abril_fatface"
                 android:hint="direccion"
                 android:textAlignment="center"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
